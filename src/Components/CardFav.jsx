@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContextGlobal } from "./utils/global.context";
 
-
-
-const Card = ({ name, username, id }) => {
+const CardFav = ({ name, username, id }) => {
 
   const { context, dispatch } = useContext(ContextGlobal)
   const { data, theme } = context
 
-  const addFav = (nameDentist, userNameDentist, idDentist)=>{
+  const deleteFav = (nameDentist, userNameDentist, idDentist)=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     if (data.filter(dentist => dentist.id === idDentist).length > 0) {
       dispatch({ type: "FAVORITES", payload: data.filter(dentist => dentist.id !== idDentist)})
@@ -31,9 +29,9 @@ const Card = ({ name, username, id }) => {
         <h5>👩🏻{name}     </h5>
         <h6>⚕️{username} </h6>
       </Link>
-      <button onClick={() => addFav(name, username, id)} className="favButton">🌟 Add fav</button>
+      <button onClick={() => deleteFav(name, username, id)} className="favButton">❌ Delete fav</button>
     </div>
   );
 };
 
-export default Card;
+export default CardFav;

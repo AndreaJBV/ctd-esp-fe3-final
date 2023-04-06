@@ -14,8 +14,9 @@ code {
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
-  border: none;
-  width: 100%;
+  border: 0.5px solid rgb(242, 242, 235);
+  width: 200px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -25,9 +26,10 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width:97.5%;
+  justify-content: right;
   padding: 1rem;
+  background-color: #C4F6FD
 }
 
 a{
@@ -47,14 +49,16 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 95%;
   height: 40px;
   margin-top: 2rem;
+  background-color: #C4F6FD
 }
 
 footer > img{
   width: 200px;
   margin: 0;
+  display: flex;
 }
 footer > p{
   margin: 0;
@@ -76,12 +80,14 @@ form{
   flex-direction: column;
   align-items: center;
   width: 200px;
+  height: 400px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
+  
 }
 
 .card-grid{
@@ -92,10 +98,11 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
@@ -116,7 +123,28 @@ tr:nth-child(even) {
 .dark{
   background-color: #12121296;
   color: white;
+  font-family-color:  white;
+  
 }
 .dark > a {
   color: white;
+}
+
+
+.icons{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.card-dark{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(242, 242, 235);
+  text-color: white;
 }
