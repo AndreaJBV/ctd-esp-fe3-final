@@ -24,6 +24,14 @@ const Form = () => {
       setErr(true)
       
     }
+
+    if(user.name.length > 5){
+      setShow(true)
+      setErr(false)
+    }else{
+        setShow(false)
+        setErr(true)
+    }
     
   }
 
